@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+*::-moz-selection {
+  background-color: #fff;
+  color: #3e52a3;
+}
+
+*::selection {
+  background-color: #fff;
+  color: #3e52a3;
+}
+
+*::before, ::after {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  background-color: #f6f6fe;
+}
+
+.top-img {
+  position: fixed;
+  right: -8em;
+  top: 0;
+  z-index: -1;
+}
+
+.bottom-img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main {
+  margin: 2rem 0;
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+}
+main .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main .container header {
+  margin-bottom: 4.5em;
+  text-align: center;
+}
+main .container header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #494c5f;
+  margin-bottom: 1.1em;
+}
+main .container .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+}
+main .container .card-container .card {
+  box-shadow: 0px 1px 20px -3px rgba(0, 0, 0, 0.1);
+  padding: 1.4em;
+  border-radius: 8px;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+main .container .card-container .card h2 {
+  font-size: 4.6rem;
+  display: flex;
+  align-items: center;
+  color: #f6f6fe;
+}
+main .container .card-container .card h2 span {
+  font-size: 3rem;
+}
+main .container .card-container .card h3 {
+  font-size: 1.2rem;
+  margin-top: 0.9em;
+  padding-bottom: 1rem;
+}
+main .container .card-container .card ul {
+  margin-top: 2.4em;
+  margin-bottom: 2em;
+}
+main .container .card-container .card ul li {
+  line-height: 3rem;
+  position: relative;
+  border-top: 1px solid #6d708d;
+}
+main .container .card-container .card ul li:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #6d708d;
+}
+main .container .card-container .card .btn {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.8em 0;
+  border-radius: 7px;
+}
+main .container .card-container .card1, main .container .card-container .card3 {
+  background-color: #f6f6fe;
+}
+main .container .card-container .card1 h2, main .container .card-container .card3 h2 {
+  color: #494c5f;
+}
+main .container .card-container .card1 h3, main .container .card-container .card3 h3 {
+  color: #6d708d;
+}
+main .container .card-container .card1 ul li, main .container .card-container .card3 ul li {
+  color: #6d708d;
+}
+main .container .card-container .card1 .btn, main .container .card-container .card3 .btn {
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: #f6f6fe;
+}
+main .container .card-container .card2 {
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  transform: scaleY(1.1);
+}
+main .container .card-container .card2 .btn {
+  background-color: #f6f6fe;
+  color: #696fdd;
+  margin-bottom: 1.2em;
+}
+main .container .card-container .card2 h3 {
+  color: #f6f6fe;
+}
+main .container .card-container .card2 ul li {
+  color: #f6f6fe;
+}
+
+footer {
+  text-align: center;
+}
+footer p {
+  color: black;
+  font-size: 0.9rem;
+}
+footer p a {
+  color: blueviolet;
+}
+
+@media screen and (max-width: 768px) {
+  main .container .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+  }
+}
+@media screen and (max-width: 1099px) {
+  main .container .card-container .card2 {
+    transform: scaleY(1);
+  }
+}
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.toggle span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #b3b5c6;
+  letter-spacing: 0.8px;
+}
+.toggle .annual {
+  margin-right: 0.5em;
+}
+.toggle .monthly {
+  margin-left: 0.5em;
+}
+.toggle .switch {
+  margin: 0 1rem;
+  position: relative;
+  display: inline-block;
+  width: 53px;
+  height: 25px;
+}
+.toggle .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.toggle .switch input:checked + .slider:before {
+  transform: translateX(27px);
+}
+.toggle .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  transition: 0.4s;
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+}
+.toggle .switch .slider:hover {
+  opacity: 80%;
+}
+.toggle .switch .slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3.6px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+.toggle .switch .round {
+  border-radius: 34px;
+}
+.toggle .switch .round::before {
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+@mixin flex {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ @mixin h1 {
+     font-size:2.2rem;
+     font-weight: 700;
+     margin-bottom: 1rem;
+     color:hsl(232, 13%, 33%);
+ }
+ 
+ @mixin span {
+     font-size: 1.1rem;
+     font-weight:400;
+     color:$span;
+     letter-spacing:.8px;
+ }
+ 
+ @mixin li {
+     font-size:.9rem;
+     font-weight: 700;
+     color:hsl(232, 13%, 33%);
+ }
+ 
+ @mixin button{
+     width:100%;
+     padding:.6rem 0;
+     font-size:.9rem;
+     font-weight:700;
+     letter-spacing: 1px;
+     background:$Linear-Gradient;
+     border:1px solid $border;
+     color:#fff;
+     border-radius: 5px;
+     cursor:pointer;
+     transition: backgorund .3s ease-in-out;
+ }
+ 

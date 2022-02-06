@@ -1,0 +1,29 @@
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 700;
+    
+}
+*::selection{
+    background-color: #fff;
+    color:hsl(228, 45%, 44%);
+}
+
+*::before,::after{
+    margin:0;
+    padding: 0;
+}
+
+
+img{
+    display: block;
+}
+
+a{
+    cursor: pointer;
+}
