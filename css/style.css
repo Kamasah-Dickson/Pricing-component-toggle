@@ -122,7 +122,7 @@ main .container .card-container .card .btn {
   border-radius: 7px;
 }
 main .container .card-container .card1, main .container .card-container .card3 {
-  background-color: #f6f6fe;
+  background-color: #fff;
 }
 main .container .card-container .card1 h2, main .container .card-container .card3 h2 {
   color: #494c5f;
